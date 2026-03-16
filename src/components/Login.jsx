@@ -42,7 +42,7 @@ const Login = ({ onClose }) => {
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
               <Lock className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">Admin Login</h2>
@@ -109,20 +109,14 @@ const Login = ({ onClose }) => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Signing in...' : 'Sign In'}
               </button>
             </div>
           </form>
 
-          {/* Demo Credentials Info */}
-          <div className="mt-6 p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg">
-            <p className="text-xs text-zinc-400 text-center">
-              <strong className="text-zinc-300">Demo Admin:</strong><br />
-              Email: admin@hoops.com | Password: admin123
-            </p>
-          </div>
+         
         </div>
       </div>
     </div>
