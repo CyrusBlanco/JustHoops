@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Settings, BarChart3, Users, MapPin, Trophy, LogOut } from 'lucide-react';
+import { Settings, BarChart3, Users, MapPin, Trophy, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import AdminDashboard from './admin/AdminDashboard';
 import AdminCourts from './admin/AdminCourts';
@@ -10,10 +10,16 @@ import AdminSettings from './admin/AdminSettings';
 const AdminPanel = ({ onClose }) => {
   const { user, logout } = useAuth();
   const [activeSection, setActiveSection] = useState('dashboard');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
     onClose();
+  };
+
+  const handleSectionChange = (sectionId) => {
+    setActiveSection(sectionId);
+    setSidebarOpen(false); // Close sidebar on mobile after selection
   };
 
   const sections = [
@@ -42,9 +48,30 @@ const AdminPanel = ({ onClose }) => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex">
+    <div className="min-h-screen bg-black flex relative">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        className="lg:hidden fixed top-4 left-4 z-50 w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center justify-center text-white hover:bg-zinc-800 transition-colors"
+      >
+        {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+
+      {/* Overlay for mobile */}
+      {sidebarOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 z-30"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <div className="w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col">
+      <div className={`
+        fixed lg:static inset-y-0 left-0 z-40
+        w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col
+        transform transition-transform duration-300 ease-in-out
+        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+      `}>
         {/* Admin Header */}
         <div className="p-6 border-b border-zinc-800">
           <div className="flex items-center gap-3 mb-2">
@@ -53,7 +80,7 @@ const AdminPanel = ({ onClose }) => {
             </div>
             <div>
               <h2 className="text-lg font-bold text-white">Admin Panel</h2>
-              <p className="text-xs text-zinc-500"> Management </p>
+              <p className="text-xs text-zinc-500">Management Console</p>
             </div>
           </div>
         </div>
@@ -66,7 +93,7 @@ const AdminPanel = ({ onClose }) => {
               return (
                 <button
                   key={section.id}
-                  onClick={() => setActiveSection(section.id)}
+                  onClick={() => handleSectionChange(section.id)}
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                     activeSection === section.id
                       ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30'
@@ -115,8 +142,8 @@ const AdminPanel = ({ onClose }) => {
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 overflow-auto">
-        <div className="p-8">
+      <div className="flex-1 overflow-auto w-full lg:w-auto">
+        <div className="p-4 sm:p-6 lg:p-8 pt-20 lg:pt-8">
           {renderContent()}
         </div>
       </div>
