@@ -111,10 +111,10 @@ function App() {
       {/* Admin Button - Floating */}
       <button
         onClick={handleAdminClick}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-2xl shadow-orange-500/50 flex items-center justify-center hover:scale-110 transition-transform duration-300 z-50 group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-2xl shadow-blue-500/50 flex items-center justify-center hover:scale-110 transition-transform duration-300 z-50 group"
         title="Open Admin Panel"
       >
-        <Settings className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
+        <Settings className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
       </button>
 
       {/* Header with navigation */}
@@ -128,7 +128,7 @@ function App() {
       />
 
       {/* Main content area */}
-      <main className="relative max-w-7xl mx-auto px-6 py-8">
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 pb-20 sm:pb-8">
         {/* Stats overview cards */}
         <StatsOverview stats={stats} />
 
