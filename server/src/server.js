@@ -98,7 +98,7 @@ process.on('unhandledRejection', (err) => {
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://hoops.yourdomain.com']  // Your actual domain
+    ? ['https://justhoops.vercel.app']  // Your actual domain
     : 'http://localhost:5173',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
