@@ -203,7 +203,7 @@ const AdminSettings = () => {
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 shadow-2xl">
               {/* Header */}
               <div className="mb-6">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                   <Lock className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold text-white text-center mb-2">Change Password</h2>
@@ -239,7 +239,7 @@ const AdminSettings = () => {
                     value={passwordData.currentPassword}
                     onChange={handlePasswordChange}
                     required
-                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="••••••••"
                   />
                 </div>
@@ -256,7 +256,7 @@ const AdminSettings = () => {
                     onChange={handlePasswordChange}
                     required
                     minLength={6}
-                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="••••••••"
                   />
                   <p className="text-xs text-zinc-500 mt-1">Minimum 6 characters</p>
@@ -273,7 +273,7 @@ const AdminSettings = () => {
                     value={passwordData.confirmPassword}
                     onChange={handlePasswordChange}
                     required
-                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+                    className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="••••••••"
                   />
                 </div>
@@ -299,7 +299,7 @@ const AdminSettings = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Changing...' : 'Change Password'}
                   </button>
