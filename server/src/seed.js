@@ -174,21 +174,21 @@ const players = [
 // Seed function
 const seedDatabase = async () => {
   try {
-    console.log('🌱 Starting database seeding...');
+    console.log(' Starting database seeding...');
 
     // Clear existing data
     await Court.deleteMany({});
     await Game.deleteMany({});
     await Player.deleteMany({});
-    console.log('✅ Cleared existing data');
+    console.log(' Cleared existing data');
 
     // Insert courts
     const createdCourts = await Court.insertMany(courts);
-    console.log(`✅ Inserted ${createdCourts.length} courts`);
+    console.log(` Inserted ${createdCourts.length} courts`);
 
     // Insert players
     const createdPlayers = await Player.insertMany(players);
-    console.log(`✅ Inserted ${createdPlayers.length} players`);
+    console.log(` Inserted ${createdPlayers.length} players`);
 
     // Create games
     const games = [
@@ -237,20 +237,22 @@ const seedDatabase = async () => {
     ];
 
     const createdGames = await Game.insertMany(games);
-    console.log(`✅ Inserted ${createdGames.length} games`);
+    console.log(`Inserted ${createdGames.length} games`);
 
     console.log('');
-    console.log('🎉 Database seeding completed successfully!');
+    console.log(' Database seeding completed successfully!');
     console.log('');
-    console.log('📊 Summary:');
+    console.log(' Summary:');
     console.log(`   - Courts: ${createdCourts.length}`);
     console.log(`   - Players: ${createdPlayers.length}`);
     console.log(`   - Games: ${createdGames.length}`);
     console.log('');
 
+    // eslint-disable-next-line no-undef
     process.exit(0);
   } catch (error) {
-    console.error('❌ Seeding failed:', error);
+    console.error('Seeding failed:', error);
+    // eslint-disable-next-line no-undef
     process.exit(1);
   }
 };

@@ -1,12 +1,12 @@
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 
-// Generate JWT Token
+
 const generateToken = (userId) => {
   return jwt.sign(
     { id: userId },
     // eslint-disable-next-line no-undef
-    process.env.JWT_SECRET || 'your-secret-key-change-this',
+    process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
 };

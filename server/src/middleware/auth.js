@@ -20,7 +20,7 @@ export const protect = async (req, res, next) => {
 
     // Verify token
     // eslint-disable-next-line no-undef
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key-change-this');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Get user from token
     req.user = await User.findById(decoded.id).select('-password');
@@ -69,7 +69,7 @@ export const optionalAuth = async (req, res, next) => {
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
       token = req.headers.authorization.split(' ')[1];
       // eslint-disable-next-line no-undef
-      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key-change-this');
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
       req.user = await User.findById(decoded.id).select('-password');
     }
 

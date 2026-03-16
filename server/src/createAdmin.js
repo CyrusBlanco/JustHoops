@@ -6,7 +6,7 @@ import User from './models/User.js';
 // Load environment variables
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hoops';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function createAdminUser() {
   try {

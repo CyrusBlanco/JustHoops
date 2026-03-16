@@ -78,14 +78,14 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`
  
     Server: http://localhost:${PORT}   
      Health: http://localhost:${PORT}/api/health
-    Environment: ${process.env.NODE_ENV || 'development'}           
+    Environment: ${process.env.NODE_ENV}           
   
   `);
 });
@@ -98,7 +98,7 @@ process.on('unhandledRejection', (err) => {
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://justhoops.vercel.app']  // Your actual domain
+    ? ['process.env.FRONTEND_URL']  // Your actual domain
     : 'http://localhost:5173',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],

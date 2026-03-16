@@ -17,7 +17,7 @@ const connectDB = async () => {
     });
 
     mongoose.connection.on('disconnected', () => {
-      console.log('⚠️  MongoDB disconnected');
+      console.log(' MongoDB disconnected');
     });
 
     // Graceful shutdown
