@@ -85,7 +85,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="e.g., John Smith"
             />
           </div>
@@ -100,7 +100,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="john@email.com"
             />
           </div>
@@ -114,7 +114,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -134,7 +134,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               value={formData.position}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
             >
               {positions.map(pos => (
                 <option key={pos} value={pos}>{pos}</option>
@@ -154,7 +154,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               required
               min="0"
               max="99"
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="23"
             />
           </div>
@@ -168,7 +168,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               value={formData.status}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
             >
               <option value="active">Active</option>
               <option value="injured">Injured</option>
@@ -191,7 +191,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               name="height"
               value={formData.height}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder='6\2'
             />
           </div>
@@ -205,7 +205,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               name="weight"
               value={formData.weight}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="185 lbs"
             />
           </div>
@@ -220,7 +220,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
               value={formData.team}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="e.g., Thunder Squad"
             />
           </div>
@@ -238,7 +238,7 @@ const PlayerForm = ({ player, onSave, onCancel }) => {
         </button>
         <button
           type="submit"
-          className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all"
+          className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all"
         >
           {player ? 'Update Player' : 'Add Player'}
         </button>

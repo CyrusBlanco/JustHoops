@@ -92,7 +92,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.type}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
           >
             {gameTypes.map(type => (
               <option key={type} value={type}>{type}</option>
@@ -109,7 +109,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.status}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
           >
             <option value="Scheduled">Scheduled</option>
             <option value="Live">Live</option>
@@ -131,7 +131,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.teamA}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="e.g., Thunder Squad"
           />
         </div>
@@ -146,7 +146,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.teamB}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="e.g., Lightning Bolts"
           />
         </div>
@@ -162,7 +162,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
           value={formData.courtId}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+          className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
         >
           <option value="">Select a court</option>
           {courts.map(court => (
@@ -185,7 +185,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.date}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
           />
         </div>
 
@@ -199,7 +199,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             value={formData.time}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
           />
         </div>
 
@@ -216,7 +216,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
             min="15"
             max="180"
             step="15"
-            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
           />
         </div>
       </div>
@@ -234,7 +234,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
               value={formData.scoreA}
               onChange={handleChange}
               min="0"
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
             />
           </div>
 
@@ -248,7 +248,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
               value={formData.scoreB}
               onChange={handleChange}
               min="0"
-              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-orange-500 transition-colors"
+              className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
             />
           </div>
         </div>
@@ -265,7 +265,7 @@ const GameForm = ({ game, onSave, onCancel }) => {
         </button>
         <button
           type="submit"
-          className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-orange-500/50 transition-all"
+          className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all"
         >
           {game ? 'Update Game' : 'Schedule Game'}
         </button>

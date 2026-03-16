@@ -1,10 +1,9 @@
-/**
- * API Service with MongoDB Backend Integration
- * This connects to your local MongoDB database
- */
+//API Service with MongoDB Backend Integration
+ 
+ 
 
 // Use environment variable or default to localhost
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 class HoopsAPI {
   constructor() {

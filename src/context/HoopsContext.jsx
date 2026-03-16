@@ -1,10 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import api from '../services/api';
 
-/**
- * HoopsContext - Centralized state management with MongoDB backend
- * This connects to your Express + MongoDB API backend
- */
+
 
 const HoopsContext = createContext();
 
