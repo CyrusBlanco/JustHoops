@@ -1,7 +1,7 @@
 {
   "name": "hoops-backend",
   "version": "1.0.0",
-  "description": "Backend API for Hoops Court Management System",
+  "description": "Backend for Hoops Court Management System",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
