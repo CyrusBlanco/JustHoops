@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: #0c87e0;
+  color: white;
+}
+
+/* Glass Theme Custom Styles */
+.glass-card {
+  @apply bg-white/5 backdrop-blur-glass border border-glass shadow-glass;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-glass border border-glass shadow-glass;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-button {
+  @apply bg-white/10 backdrop-blur-glass-light border border-white/15 
+         text-white transition-all duration-300 hover:bg-white/15 
+         hover:border-white/25 hover:-translate-y-0.5 hover:shadow-glass-button;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+/* Gradient Text Effects */
+.text-gradient-silver {
+  @apply bg-silver-gradient bg-clip-text text-transparent;
+}
+
+.text-gradient-chrome {
+  @apply bg-chrome-gradient bg-clip-text text-transparent;
+}
+
+/* Gradient Border */
+.border-gradient {
+  @apply border-2 border-transparent rounded-xl;
+  background: linear-gradient(var(--tw-gradient-stops)) padding-box,
+              linear-gradient(135deg, #c0c0c0, #ffffff, #909090) border-box;
+  border: 2px solid transparent;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
