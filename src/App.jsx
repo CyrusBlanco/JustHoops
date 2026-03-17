@@ -18,6 +18,8 @@ import Login from './components/Login';
 // Constants
 import { TABS } from './utils/constants';
 
+import { Analytics } from "@vercel/analytics/next"
+
 /**
  * Main App Component
  * Manages the overall application state and navigation
@@ -135,6 +137,7 @@ function App() {
         {/* Dynamic content based on active tab */}
         {renderContent()}
       </main>
+      <Analytics />
     </div>
   );
 }
