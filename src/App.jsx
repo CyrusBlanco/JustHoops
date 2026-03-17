@@ -18,7 +18,7 @@ import Login from './components/Login';
 // Constants
 import { TABS } from './utils/constants';
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 /**
  * Main App Component
