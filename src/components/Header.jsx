@@ -15,7 +15,7 @@ const Header = ({ activeTab, setActiveTab }) => {
         <div className="flex items-center justify-between mb-4 sm:mb-6">
           <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
-              HOOPS
+              JustHOOPS
             </h1>
             <p className="text-xs sm:text-sm text-zinc-500">Court Management System</p>
           </div>
